@@ -1,22 +1,8 @@
-﻿@keyframes fadeinAnimation {
-  0% {
-    background: transparent; }
-  100% {
-    background: rgba(0, 0, 0, 0.8); } }
-
-/*@keyframes fadeinAnimation {
-    0% {
-        background: rgba(0,0,0, 0.0);
-    }
-
-    100% {
-        background: rgba(0,0,0, 0.8);
-    }
-}*/
-body {
-  padding-top: 50px;
+﻿body {
+  padding-top: 10px;
   padding-bottom: 20px;
-  font-family: 'Century Gothic'; }
+  font-family: 'Century Gothic';
+  background-color: rgba(252, 252, 252, 0.8); }
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
@@ -26,41 +12,62 @@ body {
 
 .container {
   width: 1400px !important; }
-  .container .row .projects-container {
-    /*display:flex;*/
-    /*flex-wrap:wrap;*/ }
-    .container .row .projects-container .project {
-      /*flex-basis:33%;*/
+  .container .row#navbar-wrapper {
+    width: 1400px !important;
+    height: 55px; }
+    .container .row#navbar-wrapper .nav-container {
+      position: fixed;
+      top: 0px;
+      z-index: 9999;
+      background-color: rgba(252, 252, 252, 0.8);
+      width: inherit; }
+      .container .row#navbar-wrapper .nav-container .nav-header {
+        display: inline-block;
+        font-size: 34px;
+        cursor: pointer; }
+      .container .row#navbar-wrapper .nav-container .nav-links {
+        float: right;
+        font-size: 14px;
+        padding-top: 20px; }
+        .container .row#navbar-wrapper .nav-container .nav-links .nav-element {
+          display: inline-block;
+          margin-right: 75px;
+          letter-spacing: 5px;
+          cursor: pointer; }
+          .container .row#navbar-wrapper .nav-container .nav-links .nav-element:hover {
+            color: purple;
+            border-bottom: 1px solid purple; }
+  .container .row .projects-container .project {
+    width: 460px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+    color: white; }
+    .container .row .projects-container .project .project-mask {
+      position: absolute;
+      bottom: 0px;
+      height: 300px;
       width: 460px;
-      position: relative;
-      overflow: hidden;
-      padding: 15px;
-      color: white; }
-      .container .row .projects-container .project .project-mask {
-        position: absolute;
-        bottom: 15px;
-        height: 300px;
-        width: 460px;
-        background: transparent;
-        transition: 0.6s;
-        opacity: 0; }
-        .container .row .projects-container .project .project-mask .project-caption {
-          display: none;
-          margin-top: 25%;
-          text-transform: uppercase; }
-          .container .row .projects-container .project .project-mask .project-caption .project-title {
-            font-size: 16px;
-            letter-spacing: 6px; }
-          .container .row .projects-container .project .project-mask .project-caption .project-subtitle {
-            font-size: 10px;
-            letter-spacing: 4px; }
-          .container .row .projects-container .project .project-mask .project-caption div {
-            text-align: center; }
-        .container .row .projects-container .project .project-mask:hover {
-          background: rgba(0, 0, 0, 0.8);
-          opacity: 1; }
-          .container .row .projects-container .project .project-mask:hover .project-caption {
-            display: block; }
-      .container .row .projects-container .project .project-image img {
-        height: 300px;
-        width: 460px; }
+      background: transparent;
+      transition: 0.6s;
+      opacity: 0; }
+      .container .row .projects-container .project .project-mask .project-caption {
+        display: none;
+        margin-top: 25%;
+        text-transform: uppercase; }
+        .container .row .projects-container .project .project-mask .project-caption .project-title {
+          font-size: 16px;
+          letter-spacing: 6px; }
+        .container .row .projects-container .project .project-mask .project-caption .project-subtitle {
+          font-size: 10px;
+          letter-spacing: 4px; }
+        .container .row .projects-container .project .project-mask .project-caption div {
+          text-align: center; }
+      .container .row .projects-container .project .project-mask:hover {
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 1; }
+        .container .row .projects-container .project .project-mask:hover .project-caption {
+          display: block; }
+    .container .row .projects-container .project .project-image img {
+      height: 300px;
+      width: 460px; }
