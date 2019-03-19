@@ -1,0 +1,31 @@
+﻿body {
+  padding-top: 50px;
+  padding-bottom: 20px; }
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.container {
+  width: 1400px !important; }
+  .container .row .projects-container {
+    /*display:flex;*/
+    /*flex-wrap:wrap;*/ }
+    .container .row .projects-container .project {
+      /*flex-basis:33%;*/
+      width: 460px;
+      overflow: hidden;
+      padding: 15px; }
+      .container .row .projects-container .project .project-mask {
+        position: absolute;
+        bottom: 15px;
+        height: 300px;
+        width: 460px;
+        background: transparent; }
+        .container .row .projects-container .project .project-mask:hover {
+          background: rgba(0, 0, 0, 0.6); }
+      .container .row .projects-container .project .project-image img {
+        height: 300px;
+        width: 460px; }

@@ -1,0 +1,50 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+$imageWidth: 460px;
+$imageHeight: 300px;
+
+.container {
+    width: 1400px !important;
+
+    .row {
+        .projects-container {
+            /*display:flex;*/
+            /*flex-wrap:wrap;*/
+            .project {
+                /*flex-basis:33%;*/
+                width: 460px;
+                overflow: hidden;
+                padding: 15px;
+
+                .project-mask {
+                    position: absolute;
+                    bottom: 15px;
+                    height: $imageHeight;
+                    width: $imageWidth;
+                    background: rgba(0,0,0,0.0);
+
+                    &:hover {
+                        background: rgba(0,0,0,0.6);
+                    }
+                }
+
+                .project-image {
+                    img {
+                        height: $imageHeight;
+                        width: $imageWidth;
+                    }
+                }
+            }
+        }
+    }
+}

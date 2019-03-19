@@ -1,0 +1,28 @@
+﻿@model List<DamianPortfolio.Controllers.ProjectItem>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container wrapper">
+    <div class="row">
+        <div class="projects-container">
+            @foreach (var project in Model)
+            {
+                <a class="project col-lg-4" href="@Url.Action("GetProjectByName", new {name = project.Name})">
+                    <div>
+                        <div class="project-image">
+                            <img src="@project.ImageURL"/>
+                        </div>
+                    </div>
+                    <div class="project-mask">
+
+                    </div>
+                </a>
+            }
+        </div>
+
+
+    </div>
+</div>
+
