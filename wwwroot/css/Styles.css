@@ -1,6 +1,22 @@
-﻿body {
+﻿@keyframes fadeinAnimation {
+  0% {
+    background: transparent; }
+  100% {
+    background: rgba(0, 0, 0, 0.8); } }
+
+/*@keyframes fadeinAnimation {
+    0% {
+        background: rgba(0,0,0, 0.0);
+    }
+
+    100% {
+        background: rgba(0,0,0, 0.8);
+    }
+}*/
+body {
   padding-top: 50px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  font-family: 'Century Gothic'; }
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
@@ -25,14 +41,24 @@
         bottom: 15px;
         height: 300px;
         width: 460px;
-        background: transparent; }
+        background: transparent;
+        transition: 0.6s;
+        opacity: 0; }
         .container .row .projects-container .project .project-mask .project-caption {
           display: none;
-          margin-top: 25%; }
+          margin-top: 25%;
+          text-transform: uppercase; }
+          .container .row .projects-container .project .project-mask .project-caption .project-title {
+            font-size: 16px;
+            letter-spacing: 6px; }
+          .container .row .projects-container .project .project-mask .project-caption .project-subtitle {
+            font-size: 10px;
+            letter-spacing: 4px; }
           .container .row .projects-container .project .project-mask .project-caption div {
             text-align: center; }
         .container .row .projects-container .project .project-mask:hover {
-          background: rgba(0, 0, 0, 0.6); }
+          background: rgba(0, 0, 0, 0.8);
+          opacity: 1; }
           .container .row .projects-container .project .project-mask:hover .project-caption {
             display: block; }
       .container .row .projects-container .project .project-image img {

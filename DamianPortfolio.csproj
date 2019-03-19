@@ -6,7 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="compilerconfig.json" />
     <Content Remove="wwwroot\scripts\webMain.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\Styles.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\Styles.min.css" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +32,10 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\dist\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
   </ItemGroup>
 
 </Project>
