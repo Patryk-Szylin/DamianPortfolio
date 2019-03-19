@@ -16,16 +16,25 @@
     .container .row .projects-container .project {
       /*flex-basis:33%;*/
       width: 460px;
+      position: relative;
       overflow: hidden;
-      padding: 15px; }
+      padding: 15px;
+      color: white; }
       .container .row .projects-container .project .project-mask {
         position: absolute;
         bottom: 15px;
         height: 300px;
         width: 460px;
         background: transparent; }
+        .container .row .projects-container .project .project-mask .project-caption {
+          display: none;
+          margin-top: 25%; }
+          .container .row .projects-container .project .project-mask .project-caption div {
+            text-align: center; }
         .container .row .projects-container .project .project-mask:hover {
           background: rgba(0, 0, 0, 0.6); }
+          .container .row .projects-container .project .project-mask:hover .project-caption {
+            display: block; }
       .container .row .projects-container .project .project-image img {
         height: 300px;
         width: 460px; }
